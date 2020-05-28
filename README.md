@@ -1,5 +1,5 @@
 # Invisible Light Wristband
-An Arduino script that uses the Neosensory Bluefruit SDK to send near-infrared and ultraviolet data to Buzz.
+An Arduino script that uses the [Neosensory Bluefruit SDK](https://github.com/neosensory/neosensory-sdk-for-bluefruit) to send near-infrared and ultraviolet data to Buzz.
 
 ## Setup
 [This tutorial](https://neosensory.com/blog/invisible-light-wristband/) will walk you through assembling the hardware required for this project and uploading the code. To compile this Arduino sketch, you must also install the [Plotter library](https://github.com/devinaconley/arduino-plotter) from Devin Conley, which you can do via Arduino's Library Manager. 
