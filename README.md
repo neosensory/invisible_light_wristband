@@ -14,3 +14,14 @@ Try moving your wristband into and out of the sun to feel the change in UV signa
 
 ## Plotting
 This Arduino sketch is setup to plot the UV and IR signal data for convenient visualizing. To use these plots, follow the [installation instructions](https://github.com/devinaconley/arduino-plotter/wiki/Installation-and-Quickstart#installation) on Devin Conley's Arduino Plotter repository. If you are not using the plots, you still must install the library in order to compile the code or instead you must remove the `plot.ino` file and the plot functions from the `invisisble_light_wristband.ino` file.
+
+## License
+Please note that while this Neosensory SDK has an Apache 2.0 license, 
+usage of the Neosensory API to interface with Neosensory products is 
+still  subject to the Neosensory developer terms of service located at:
+https://neosensory.com/legal/dev-terms-service.
+
+See [LICENSE](./LICENSE).
+
+## Author
+Originally created by Mike Perrotta for Neosensory, Inc.
