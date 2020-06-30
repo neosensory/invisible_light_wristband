@@ -88,26 +88,11 @@ class SensorData {
 
     // Print newest data, running mean, and activation values to Serial port
     void print_info() {
-//      Serial.print("Data: "); Serial.println(data_name);
-//      Serial.print("\tRunning mean: "); Serial.println(running_mean, 5);
-//      Serial.print("\t Newest data: "); Serial.println(latest_data, 5);
-//      Serial.print("\tNewest delta: "); Serial.println(latest_data - running_mean, 5);
-//      Serial.print("\t  Activation: "); Serial.println(get_activation(), 5);
-      
-      Serial.print(data_name);
-      Serial.print(",");
-      Serial.print("nada");
-      Serial.print(",");
-      Serial.print(latest_data - running_mean, 5);
-      Serial.print(",");
-      Serial.print(min_activation, 5);
-      Serial.print(",");
-      Serial.print(max_activation, 5);
-      Serial.print(",");
-      Serial.print(-1 * min_activation, 5);
-      Serial.print(",");
-      Serial.print(-1 * max_activation, 5);
-      Serial.println("");
+      Serial.print("Data: "); Serial.println(data_name);
+      Serial.print("\tRunning mean: "); Serial.println(running_mean, 5);
+      Serial.print("\t Newest data: "); Serial.println(latest_data, 5);
+      Serial.print("\tNewest delta: "); Serial.println(latest_data - running_mean, 5);
+      Serial.print("\t  Activation: "); Serial.println(get_activation(), 5);
     }
 
   private:
