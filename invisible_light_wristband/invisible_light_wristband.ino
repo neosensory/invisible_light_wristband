@@ -42,7 +42,7 @@ SensorData irData(true, 3, 0.025, 0.25, RECORDING_SAMPLE_RATE, "IR");
 
 bool do_print_buzz_messages = false;
 bool do_print_sensor_data = false;
-bool do_plot_data = true;
+bool do_plot_data = true; /* If plotting data, you should not print other messages */
 
 int num_frames_to_send;
 
@@ -54,7 +54,7 @@ void setup() {
   NeoBluefruit.setReadNotifyCallback(onReadNotify);
   NeoBluefruit.startScan();
   setup_sensors();
-  setup_plot();
+  if (do_plot_data) setup_plot();
   num_frames_to_send = RECORDING_DELAY_MS / NeoBluefruit.firmware_frame_duration();
 }
 
@@ -67,9 +67,7 @@ void loop () {
       irData.print_info();
     }
     
-    if (do_plot_data) {
-      plot_data();
-    }
+    if (do_plot_data) plot_data();
     
     if (NeoBluefruit.isConnected() & NeoBluefruit.isAuthorized()) {
       float** motor_frames = get_motor_frames(uvData.get_activation(), irData.get_activation());
